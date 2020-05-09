@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      /* font: 150% sans-serif; */
+      background: rgb(36, 36, 36);
+      padding-left: auto;
+      padding-right: auto;
+    }
+
+    p {
+      font-family: 'Chelsea Market', cursive;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      padding-left: 0.3em;
+      padding-right: 0.3em;
+      float: left;
+    }
+
+    .wort p{
+      font-size: 3em;
+      /* border: 1px solid white; */
+      color:rgb(243, 237, 146);
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .wort:hover p{
+      font-size: 4.3em;
+      color:rgb(113, 101, 226);
+      -ms-transform: rotate(-10deg);
+     -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+      transition-timing-function: ease-in-out;
+    }
+  
+  .wort:hover p:nth-child(2) {
+     transition-delay: 0.1s;
+     -ms-transform: rotate(5deg);
+     -webkit-transform: rotate(5deg);
+     transform: rotate(5deg);
+     font-size: 5.2em;
+  }
+  .wort:hover p:nth-child(3) {
+     transition-delay: 0.2s;
+  }
+  .wort:hover p:nth-child(4) {
+     transition-delay: 0.3s;
+     -ms-transform: rotate(2deg);
+     -webkit-transform: rotate(2deg);
+     transform: rotate(2deg);
+     font-size: 5.8em; 
+  }
+
+  </style>
+  <title>Wort Transition</title>
+</head>
+
+<body>
+
+  <div class="wort">
+    <p>I'M</p>
+    <p>MORE</p>
+    <p>THEN</p>
+    <p>READY</p>
+  </div>
+
+
+</body>
+</html>
