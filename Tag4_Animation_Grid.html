@@ -28,11 +28,12 @@
       max-width: 700px;
       min-height: 820px;
       grid-template-columns: 30px 140px 140px 140px 140px 30px;
-      grid-template-rows: 20px 70px 70px 70px 70px 70px 70px 70px 70px 20px;
-      grid-gap: 20px;
+      grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 70px;
+      grid-gap: 40px;
       text-align: start;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 150px;
 
     }
 
@@ -43,70 +44,67 @@
       letter-spacing: -0.04em;
       line-height: 90%;
     }
-  
-    .a {
+
+    .links {
       grid-column: 2 / 4;
-      grid-row: 2 / 3;
       padding: 0;
     }
-    .b {
-      grid-column: 2 / 4;
-      grid-row: 3 / 4;
-    }
-    .c {
-      grid-column: 2 / 4;
-      grid-row: 4 / 5;
-    }
-    .d {
-      grid-column: 2 / 4;
-      grid-row: 5 / 6;
-      align-items: end;
-    }
-    .e {
-      grid-column: 2 / 4;
-      grid-row: 6 / 7;
-    }
-    .f {
-      grid-column: 2 / 4;
-      grid-row: 7 / 8;
-    }
-    .g {
-      grid-column: 2 / 4;
-      grid-row: 8 / 9;
-    }
-    .h {
-      grid-column: 2 / 4;
-      grid-row: 9 / 10;
-    }
-    .i {
-      grid-column: 2 / 4;
-      grid-row: 10 / 11;
-    }
-    .raster p {
+
+    .links p {
       font-size: 1.5em;
       color: white;
       /* border: 1px solid white; */
       text-align: start;
-      /*transition: all 0.5s ease;*/
+      
 
-      animation-name: bewegen;
+      animation-name: bewegen1;
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      /* animation-timing-function: ease-in-out; */
+  
       animation-timing-function: cubic-bezier(.6,.37,.22,.75);
 }
 
-@keyframes bewegen {
+@keyframes bewegen1 {
       0% {
-        /* text-align: start; */
+        transform: translate(20vw, 0vh) scale(1.2,1.2) rotate(-10deg);
+      }
+      50% {
+        color:rgb(255, 255, 255);
+      } 
+      100% {
+        transform: translate(0px, 0px) rotate(10deg); 
+      }
+    }
+
+    .rechts {
+      grid-column: 2 / 4;
+      padding: 0;
+    }
+    
+    .rechts p {
+      font-size: 1.5em;
+      color: white;
+      /* border: 1px solid white; */
+      text-align: start;
+      
+
+      animation-name: bewegen2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  
+      animation-timing-function: cubic-bezier(.6,.37,.22,.75);
+}
+
+@keyframes bewegen2 {
+      0% {
         transform: translate(0px, 0px) rotate(10deg);
       }
       50% {
         color:rgb(255, 255, 255);
       } 
       100% {
-        /* text-align: end; */
         transform: translate(20vw, 0vh) scale(1.2,1.2) rotate(-10deg); 
       }
     }
@@ -117,15 +115,11 @@
 </head>
 <body>
 <div class="raster">
-  <div class="a"><p>PRESSURE</p></div>
-  <div class="b"><p>PRESSURE</p></div>
-  <div class="c"><p>PRESSURE</p></div>
-  <div class="d"><p>PRESSURE</p></div>
-  <div class="e"><p>PRESSURE</p></div>
-  <div class="f"><p>PRESSURE</p></div>
-  <div class="g"><p>PRESSURE</p></div>
-  <div class="h"><p>PRESSURE</p></div>
-  <div class="i"><p>PRESSURE</p></div>
+  <div class="links"><p>PRESSURE</p></div>
+  <div class="rechts"><p>PRESSURE</p></div>
+  <div class="links"><p>PRESSURE</p></div>
+  <div class="rechts"><p>PRESSURE</p></div>
+  
   
 </div>
 </body>
