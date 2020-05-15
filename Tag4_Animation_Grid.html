@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: rgb(54, 63, 153);
+      font-family: 'Chelsea Market', cursive;
+    }
+  
+
+    .raster div {
+      background: rgb(54, 63, 153);
+      /* border: 1px #2C3E50 solid; */
+      font-size: 3em;
+    }
+
+    .raster {
+      background:rgb(54, 63, 153);
+      display: grid;
+      border: 1px solid white;
+      max-width: 700px;
+      min-height: 820px;
+      grid-template-columns: 30px 140px 140px 140px 140px 30px;
+      grid-template-rows: 20px 70px 70px 70px 70px 70px 70px 70px 70px 20px;
+      grid-gap: 15px;
+      text-align: start;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: 'Chelsea Market', cursive;
+      letter-spacing: -0.04em;
+      line-height: 90%;
+    }
+  
+    .a {
+      grid-column: 2 / 6;
+      grid-row: 2 / 3;
+      padding: 0;
+    }
+    .b {
+      grid-column: 2 / 6;
+      grid-row: 3 / 4;
+    }
+    .c {
+      grid-column: 2 / 6;
+      grid-row: 4 / 5;
+    }
+    .d {
+      grid-column: 2 / 6;
+      grid-row: 5 / 6;
+      align-items: end;
+    }
+    .e {
+      grid-column: 2 / 6;
+      grid-row: 6 / 7;
+    }
+    .f {
+      grid-column: 2 / 6;
+      grid-row: 7 / 8;
+    }
+    .g {
+      grid-column: 2 / 6;
+      grid-row: 8 / 9;
+    }
+    .h {
+      grid-column: 2 / 6;
+      grid-row: 9 / 10;
+    }
+    .i {
+      grid-column: 2 / 6;
+      grid-row: 10 / 11;
+    }
+    .raster p {
+      font-size: 1.5em;
+      color: white;
+      /* border: 1px solid white; */
+      position: absolute;
+      transition: all 0.5s ease;
+
+      animation-name: bewegen;
+      animation-duration: 4;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+}
+
+@keyframes bewegen {
+      0% {
+        background-color: rgb(54, 63, 153);
+      }
+      50% {
+        background-color: rgb(49, 104, 96);
+      }
+      100% {
+        background-color: rgb(176, 192, 104);
+      }
+    }
+    
+
+    
+
+  </style>
+  <title>TAG 4 - Animation</title>
+</head>
+<body>
+<div class="raster">
+  <div class="a"><p>PRESSURE</p></div>
+  <div class="b"><p>PRESSURE</p></div>
+  <div class="c"><p>PRESSURE</p></div>
+  <div class="d"><p>PRESSURE</p></div>
+  <div class="e"><p>PRESSURE</p></div>
+  <div class="f"><p>PRESSURE</p></div>
+  <div class="g"><p>PRESSURE</p></div>
+  <div class="h"><p>PRESSURE</p></div>
+  <div class="i"><p>PRESSURE</p></div>
+  
+</div>
+</body>
+</html>
