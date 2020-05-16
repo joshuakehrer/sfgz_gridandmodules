@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Chelsea+Market&display=swap" rel="stylesheet">
+  <title>Grid</title>
+  <style>
+    body > * {
+      margin: 15px;
+      padding: 0em;
+      border-radius: 7px;
+    }
+
+    body {
+      max-width: 1030px;
+      margin-top: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      background: #171717;
+      display: grid;
+      grid-template-areas:
+      "header header header header header header" 
+      "nav nav nav . . ."
+      ". . . article article article"  
+      "section section section . . ."
+      ". . . footer footer footer";
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    p {
+      font-size: 2.2em;
+      font-family: 'Anonymous Pro', monospace;
+      line-height: 1.2em;
+      color: white;
+    }
+
+    h1 {
+      font-size: 4.8em;
+      font-family: 'Chelsea Market', cursive;
+      color: rgb(253, 253, 253);
+      line-height: 1.2em;
+      transition: all 0.5s ease;
+    }
+
+
+    h2 {
+      font-size: 3em;
+      font-family: 'Chelsea Market', cursive;
+      color: #D15751;
+      line-height: 0.5em;
+    }
+
+    header {
+      /* border: 1px solid white; */
+      grid-area: header;
+      text-align: center;
+      animation-name: bewegen1;
+      animation-duration: 1.4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  
+      animation-timing-function: ease-in-out;
+}
+
+@keyframes bewegen1 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: scale(1.15,1.15) rotate(2deg); 
+      }
+    }
+
+    article {
+      /* border: 1px solid white; */
+      grid-area: article;
+      transform: rotate(8deg);
+    }
+
+    section {
+      /* border: 1px solid white; */
+      grid-area: section;
+    }
+
+
+    nav {
+      /* border: 1px solid white; */
+      grid-area: nav;
+    }
+
+    footer {
+      /* border: 1px solid white; */
+      grid-area: footer;
+    }
+
+    @media all and (max-width: 768px) {
+      body {
+        margin: 8px;
+        text-align: center;
+        grid-template-areas: 
+        "header header header header header"
+        ". nav nav nav ."
+        ". article article article ."
+        ". section section section ."
+        ". footer footer footer .";
+        grid-template-columns: 50px 1fr 1fr 1fr 50px;
+      }
+
+      p {
+      font-size: 1.5em;
+      font-family: 'Anonymous Pro', monospace;
+      line-height: 1em;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3.3em;
+      font-family: 'Chelsea Market', cursive;
+      color: rgb(253, 253, 253);
+      line-height: 1.2em;
+    }
+
+    h2 {
+      font-size: 2.6em;
+      font-family: 'Chelsea Market', cursive;
+      color: #D15751;
+      line-height: 1em;
+    }
+    }
+
+    @media all and (max-width: 30em) {
+      body {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<header><h1>WARNING<br>STRONG CONTENT</h1></header>
+<nav><p>You cann thell them that<br>I've been from</p>
+<h2>HELL AND BACK</h2></nav>
+<article><p>When the heat is on</p>
+<h2>I FIRE BACK</h2></article>
+<section><p>In this cold world<br>Where your lighters at</p></section>
+<footer><p>Let's burn it down</p>
+<h2>F - F - FIRE BACK</h2></footer>
+</body>
+</html>
