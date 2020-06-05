@@ -19,14 +19,14 @@ p {
 h1 {
   font-family:'Anonymous Pro', monospace;
   font-size: 3em;
-  line-height: 1.2em;
+  line-height: 1.3em;
   color: white;
 }
 
 h2 {
   font-family: 'Chelsea Market', cursive;
   font-size: 4.5em;
-  line-height: 1.1em;
+  line-height: 1.3em;
   color: #DB4941;
 }
 
@@ -43,22 +43,55 @@ h4 {
   font-family: 'Chelsea Market', cursive;
   font-size: 14em;
   line-height: 1em;
-  color: #DB4941;
+}
+
+.red {
+  color:#DB4941;
+
+animation-name: blinken;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+@keyframes blinken {
+  100% {
+    color: rgb(121, 43, 36);
+  }
+}
+
+
+.white {
+  color:rgb(255, 255, 255);
 }
 
 h5 {
   font-family: 'Chelsea Market', cursive;
-  font-size: 8em;
+  font-size: 7em;
   line-height: 1.1em;
   color: white;
 }
 
 h6 {
   font-family: 'Chelsea Market', cursive;
-  font-size: 14em;
+  font-size: 33em;
   line-height: 1.2em;
-  color: white;
+  color: #DB4941;
+
+  animation-name: blinken;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
 }
+
+@keyframes blinken {
+  100% {
+    color: rgb(121, 43, 36);
+  }
+}
+
 
 .raster > * {
   background: rgb(71, 71, 71);
@@ -70,7 +103,7 @@ h6 {
 .raster-header {
   display: grid;
   background-color: rgb(218, 73, 65);
-  grid-template-columns: 40px repeat(10, 1fr) 40px;
+  grid-template-columns: 40px 1fr 40px;
   /* grid-template-rows: 600px; */
   grid-gap: 15px;
   min-height:100vh;
@@ -88,14 +121,30 @@ h6 {
     background-color: rgb(218, 73, 65);
   }
   100% {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(121, 41, 37);
   }
 }
 
 .header {
-  grid-column: 3 / 11;
+  grid-column: 2 / 3;
   text-align: center;
+  padding-top: 5%;
+
+  animation-name: drehen;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
+
+@keyframes drehen {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: scale(1.1,1.1) rotate(2deg); 
+      }
+  }
 
 
 section {
@@ -106,7 +155,7 @@ section {
 .grundraster1{
   display: grid;
   grid-template-columns: 40px repeat(10, 1fr) 40px;
-  grid-template-rows: repeat(3, 1fr) 2fr;
+  grid-template-rows: repeat(4, 1fr);
   min-height:100vh;
   justify-content: start;
   align-content: start;
@@ -124,7 +173,7 @@ section {
 .item-b {
   grid-column: 7 / 12;
   grid-row: 3 / 4;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
   display: flex;
 }
@@ -154,14 +203,18 @@ section {
 }
 
 .item-e {
-  grid-column: 3 / 9;
+  grid-column: 3 / 11;
   grid-row: 3 / 4;
 }
 
 .item-f {
-  grid-column: 7 / 12;
+  grid-column: 6 / 12;
   grid-row: 2 / 3;
-  /* border: 1px solid white; */
+}
+
+.item-g {
+  grid-column: 3 / 9;
+  grid-row: 6 / 7;
 }
 
 .red-box {
@@ -174,6 +227,12 @@ section {
 }
 
 .item-h {
-  grid-column: 8 / 12;
+  grid-column: 6 / 12;
   grid-row: 5 / 6;
+}
+
+.reference p {
+  text-align: center;
+  padding-top: 8em;
+  padding-bottom: 2em;
 }
