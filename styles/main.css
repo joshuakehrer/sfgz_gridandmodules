@@ -86,6 +86,7 @@ h6 {
 
 .animation.isinview {
   transform: scale(1.1,1.2);
+  transition-delay: 0.1s;
   transition-timing-function: cubic-bezier(.81,-0.03,.07,.94);
 }
 
@@ -205,10 +206,12 @@ section {
   grid-column: 3 / 9;
   grid-row: 6 / 7;
   transition: all 1s ease;
+  transform: scale(0.6) rotate(30deg);
 }
 
 .red-box.isinview {
   transform: scale(1.2,1.2) rotate(-8deg);
+  transition-delay: 0.2s;
   transition-timing-function: cubic-bezier(.81,-0.03,.07,.94);  
 }
 
@@ -226,4 +229,94 @@ section {
   padding-top: 14em;
   padding-left: 6em;
   padding-bottom: 3em;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 450px) {
+  p {
+    font-size: 1.6em;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.1em;
+  }
+  h2 {
+    font-size: 4.2em;
+    line-height: 1em;
+  }
+  h4 {
+    font-size: 7em;
+    line-height: 1em;
+  }
+  h3 {
+    font-size: 4.2em;
+    line-height: 1em;
+    padding: 0.3%;
+  }
+  h5 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  h6 {
+    font-size: 13em;
+    line-height: 1em;
+  }
+  .header {
+    grid-column: 1 / 3;
+    padding-top: 50%;
+  }
+
+  .grundraster1{
+    display: grid;
+    grid-template-columns: 30px repeat(10, 1fr) 30px;
+    grid-template-rows: 200px repeat(4, 400px);
+  }
+  .item-a {
+    grid-column: 2 / 12;
+    grid-row: 2 / 3;
+  }
+  .item-b {
+    grid-column: 2 / 12;
+    grid-row: 3 / 4;
+  }
+  .item-c {
+    grid-column: 2 / 12;
+    grid-row: 4 / 5;
+  }
+  .item-d {
+    grid-column: 2 / 12;
+    grid-row: 5 / 6;
+  }
+
+  .grundraster2{
+    display: grid;
+    grid-template-columns: 30px repeat(10, 1fr) 30px;
+    grid-template-rows: repeat(6, 400px);
+  }
+  
+  .item-e {
+    grid-column: 3 / 12;
+    grid-row: 3 / 4;
+  }
+  
+  .item-f {
+    grid-column: 3 / 12;
+    grid-row: 2 / 3;
+  }
+  
+  .item-g {
+    grid-column: 3 / 12;
+    grid-row: 6 / 7;
+  }
+  .item-h {
+    grid-column: 3 / 12;
+    grid-row: 5 / 6;
+  }
+  .red-box {
+    grid-column: 3 / 12;
+    grid-row: 6 / 7;
+  }
+  .impressum p {
+    padding-left: 1em;
+  }
 }
